@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans&family=Oswald&family=Roboto:ital,wght@1,100&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans&family=Nanum+Gothic+Coding:wght@700&family=Oswald&family=Roboto:ital,wght@1,100&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans&family=Roboto:ital,wght@1,100&family=Source+Code+Pro&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Encode Sans', sans-serif;
+  box-sizing: border-box;
+
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  background-color: black;
+  color: aliceblue;
+  background-image: url("b.jpeg");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+
+.title {
+  font-size: 32px;
+  font-family: 'Source Code Pro', monospace;
+
+  margin: 3rem 1.5rem;
+}
+
+#header {
+  width: 100%;
+  height: 100vh;
+  /* background-image: url("harsh2.png"); */
+  background-size: auto;
+  background-position: right;
+  background-repeat: no-repeat;
+  margin-right: 2rem;
+  padding-right: 3rem;
+}
+.about h1{
+  font-family: 'Nanum Gothic Coding', monospace;
+}
+.container {
+  padding: 2.5rem;
+}
+.flex {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 5% auto;
+  position: absolute;
+  transform: translateX(100%);
+  transition: 0.3s;
+  flex-direction: row;
+  
+}
+.header-text-right img{
+  margin-left: 80px;
+  margin-top: -40px;
+  width: 24rem;
+  height: 40rem;
+}
+.header-text {
+  flex-basis: 40%;
+  display: inline-block;
+  margin: 5px 30px;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(206, 169, 241);
+}
+
+.header-text-right {
+  flex-basis: 50%;
+  display: inline-block;
+  text-align: right;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-family: 'Nanum Gothic Coding', monospace;
+  color: aliceblue;
+  font-size: large;
+}
+
+nav ul li a:hover {
+  color: rgb(89, 172, 245);
+  transition: .5s;
+  cursor: pointer;
+}
+
+.header-text {
+  margin-top: 1%;
+  margin-left: 4rem;
+}
+
+.header-text h1 {
+  margin-top: 20px;
+}
+
+.header-text h1 span {
+  color: rgb(89, 172, 245);
+
+}
+
+/* #about{
+  padding 80px 0px;
+  color: rgb(206, 169, 241);
+}
+.row{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.about1{
+  flex-basis: 35%;
+}
+.about1 img{
+  margin-top: 10rem;
+  width: 70%;
+  border-radius: 20px;
+  margin-left: 40px;
+}
+.about2{
+  flex-basis: 55%;
+  margin-top: 5rem;
+  margin-right: 6rem;
+}
+.sub-title{
+  font-family:'Source Code Pro', monospace;
+  font-size: 45px;
+  color: rgb(206, 169, 241);
+}
+.text{
+  font-size: 20px;
+  font-family: 'Encode Sans', sans-serif;
+  color: aliceblue;
+}
+.tab-titles{
+  display: flex;
+  margin: 20px 0px 40px;
+
+}
+.tab-links{
+  font-family:'Source Code Pro', monospace ;
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  position:relative;
+}
+.tab-links::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: rgb(128, 113, 246);
+  position: absolute;
+  left:0;
+  bottom: -8px;
+  transition: 0.5s;
+
+}
+.tab-links:hover{
+    background-color: black;
+    color:aliceblue;
+    transition: .5s;
+    cursor: pointer;
+}
+.tab-links.active-links::after{
+  width: 50%;
+}
+.tab-contents ul li{
+  list-style: none;
+  margin: 10px 0;
+
+}
+.tab-contents ul li span{
+  color: rgb(206, 169, 241);
+  font-size: 14px;
+
+}
+.tab-contents{
+  display: none;
+}
+.tab-contents.active-tabs{
+  display: block;
+} */
+
+
+.hero {
+  width: 70%;
+  height: 450px;
+  position: relative;
+  margin: 100px auto;
+  overflow: hidden;
+}
+
+.btn-box {
+  display: flex;
+  border-bottom: 1px solid black;
+  border-color: aliceblue;
+  justify-content: space-around;
+}
+
+.btn-box button {
+  color: aliceblue;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  margin-right: 40px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn-box button:hover {
+  color: palevioletred;
+}
+
+.content-right img {
+  width: 350px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.content {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 5% auto;
+  position: absolute;
+  transform: translateX(100%);
+  transition: 0.3s;
+}
+
+.content-left {
+  flex-basis: 50%;
+  margin: 40px 30px;
+  font-size: 21px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(206, 169, 241);
+  font-weight: 600;
+}
+.contact-left p{
+  font-weight: 500;
+}
+
+.content-right {
+  flex-basis: 50%;
+  text-align: center;
+}
+
+#content1 {
+  transform: translateX(0);
+}
+
+#btn1 {
+  color: rgb(206, 169, 241);
+}
+
+
+
+
+
+/* cards */
+.mywork h1{
+  font-family: 'Nanum Gothic Coding', monospace;
+}
+.cards {
+  width: 40%;
+  background-color: rgb(134, 129, 129);
+  border-radius: 15px;
+  display: inline-block;
+  margin: 40px;
+  box-shadow: 10px 10px 20px black;
+  margin-left: 5%;
+  margin-right: 3%;
+  transition: background 0.5s, trnasform 0.5s;
+}
+
+.cards:hover {
+  background: #ff004f;
+  transform: translateY(-30px);
+}
+
+.image img {
+  padding: 20px 20px;
+  padding-bottom: 10px;
+  height: 30%;
+  width: 100%;
+  border-radius: 20px;
+  transition: transform 0.5s;
+}
+
+.image:hover img {
+  transform: scale(1.2);
+}
+
+.title {
+  text-align: centre;
+  padding: 1px;
+  color: rgb(205, 238, 89);
+  font-weight: bolder;
+  font-family: 'Nanum Gothic Coding', monospace;
+
+}
+
+.description {
+  text-align: centre;
+  padding: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: antiquewhite;
+}
+
+.btn {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: lightgray;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 10px;
+
+}
+
+.btn:hover {
+  background-color: black;
+  color: aliceblue;
+  transition: .5s;
+  cursor: pointer;
+
+}
+
+.mywork {
+  font-family: 'Source Code Pro', monospace;
+  margin: 60px;
+  font-size: x-large;
+  padding: 10px;
+  margin-left: 142px;
+  color: rgb(205, 238, 89);
+  cursor: pointer;
+
+}
+
+.contacts {
+  font-family: 'Source Code Pro', monospace;
+  margin: 60px;
+  font-size: 50px;
+  padding: 10px;
+  margin-left: 120px;
+  color: rgb(205, 238, 89);
+  cursor: pointer;
+}
+
+.mywork:hover {
+  color: rgb(70, 70, 185);
+  transform: translateY(-5px);
+}
+
+.about {
+  color: rgb(205, 238, 89);
+  font-size: x-large;
+  margin-top: 170px;
+  margin-left: 148px;
+}
+
+.about:hover {
+  color: rgb(70, 70, 185);
+  transform: translateY(-5px);
+}
+
+.row1 {
+  display: flex;
+}
+
+.contactr-left {
+  flex-basis: 35%;
+
+}
+
+.contact-right {
+
+  flex-basis: 60%;
+}
+
+.contact-left p {
+  margin-top: 30px;
+}
+
+.contact-left p i {
+  color: #ff004f;
+  margin-right: 15px;
+  font-size: 25px;
+
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: aqua;
+  display: inline block;
+  transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+  color: rgb(32, 113, 206);
+  transform: translateY(-10px);
+}
+
+.btn1 {
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: rgb(216, 63, 148);
+  border: 1px solid black;
+  padding: 15px 25px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.contact-right form {
+  width: 100%;
+  margin-top: 100px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+nav .fa-solid{
+  display: none;
+}
+
+@media only screen and (max-width:761px){
+  body{
+    background-image: url("try.jpeg");
+
+    background-size: cover;
+  }
+  /* #sidemenu {
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: #ff004f;
+  }
+  #sidemenu ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color:white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid black;
+    transition: .4s;
+    }
+    ul li:hover a{
+      padding-left: 50px;
+    }
+    #sidebar ul a i{
+      margin-right: 16px;
+      
+    } */
+  .header-text{
+    margin-top: 50%;
+    font-size: 8px;
+  }
+  .header-text p{
+    font-size: 14px;
+  }
+  .header-text h1{
+    font-size: 19px;
+  }
+  .fa-solid{
+    display: block;
+    font-size: 25px;
+
+  }
+  nav ul{
+    background: rgb(132, 206, 163);
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 200vh;
+    padding-top: 50px ;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 25px;
+  }
+  nav ul .fa-solid{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+  .header-text-right img{
+    margin-left: -28px;
+    width: 18rem;
+    height: 26rem;
+    /* flex-basis: 100%; */
+  }
+  .about{
+    margin-left: 40px;
+    font-size: medium;
+    margin-bottom: 20px;
+    margin-top: 160px;
+  }
+  .hero {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    margin: 10px auto;
+    overflow: hidden;
+  }
+  .btn-box button{
+    font-size: 16px;
+    margin: 2.5px;
+  }
+  .content-left p{
+    font-size: 15px;
+    margin: 0px;
+    text-align: left;
+    overflow: scroll;
+    width: fit-content;
+    width: 316px;
+  }
+  .content-right img {
+    width: 155px;
+    height: 150px;
+    border-radius: 20px;
+    margin-top: 51px;
+  }
+  .mywork{
+    font-size: medium;
+    margin-left: 26px;
+  }
+  .mywork h1{
+    font-family: 'Nanum Gothic Coding', monospace;
+  }
+  .cards{
+    width: 91%;
+  }
+  .title{
+    font-size: 24px;
+    margin-top: 20px;
+    font-family: 'Nanum Gothic Coding', monospace;
+  }
+  .image img{
+    height: 60%;
+    width: 100%;
+  }
+  .contacts{
+    font-size: 40px;
+    margin: -5px ;
+    font-family: 'Nanum Gothic Coding', monospace;
+  }
+  .contacts p{
+    font-size: smaller;
+  }
+  .row1{
+    display: block;
+  }
+  .header-text {
+    margin-top: 4%;
+    margin-left: 1rem;
+}
+}

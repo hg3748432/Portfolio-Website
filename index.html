@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <link href="file:///Users/harshgupta/Desktop/portfolio/style.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/4a0e4e2ddd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="title">Portfolio</div>
+
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#aboutme">About</a></li>
+                    <li><a href="#myworks">My Works</a></li>
+                    <li><a href="#contacts">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="close()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="open()"></i>
+            </nav>
+            
+            <div class="flex"></div>
+            <div class="header-text">
+                <p class="badge bg-secondary">Web developer</p>
+                <h1>
+                    Hi, I'm <span>Harsh</span><br />
+                    Gupta, a <span>Full Stack Web Developer</span><br />
+                    from India.This is my <span>Portfolio </span>where <br />i have
+                    shared my <span>Skills, Experience<br> </span>and <span>Projects.</span>
+                </h1>
+            </div>
+            <div class="header-text-right">
+                <img src="harsh2-removebg.png">
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="about" id="aboutme">
+        <h1>About Me</h1>
+    </div>
+    <div class="hero">
+        <div class="btn-box">
+            <button id="btn1" onclick="openskills()">Skills</button>
+            <button id="btn2" onclick="openeducation()">Education</button>
+            <button id="btn3" onclick="openexperience()">Certifications</button>
+        </div>
+        <div id="content1" class="content">
+            <div class="content-left">
+                <p>
+                    My expertise includes proficiency in front-end technologies like
+                    HTML, CSS, and JavaScript, as well as experience with popular
+                    frameworks such as React and Vue.js. I also have a 
+                    understanding of back-end development, working with languages like
+                    Node.js and databases like MySQL.
+                </p>
+            </div>
+            <div class="content-right">
+                <img src="1.jpeg" />
+            </div>
+        </div>
+        <div id="content2" class="content">
+            <div class="content-left">
+                <p>
+                    I am currently a third-year student pursuing my education at VIT
+                    Vellore. My academic journey here has been
+                    instrumental in shaping my skills and knowledge in web development.
+                    Prior to my university studies, I completed my secondary education
+                    at D.A.V Public School,Faridabad, where I laid the groundwork for my
+                    academic pursuits.
+                </p>
+            </div>
+            <div class="content-right">
+                <img src="educationn.jpeg" />
+            </div>
+        </div>
+        <div id="content3" class="content">
+            <div class="content-left">
+                <p>
+                    <br>Mern Full Stack Web Development 
+                    <br> AWS Cloud Practitioner and Solution Architect
+                    <br> TechBairn Full Stack Web Development
+
+                </p>
+            </div>
+            <div class="content-right">
+                <img src="3.png" />
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- projects -->
+    <div class="main">
+        <div class="mywork" id="myworks">
+            <h1>My Works</h1>
+        </div>
+        <div class="cards">
+            <div class="image">
+                <img src="4.png">
+            </div>
+            <div class="title">
+                <h3> Portfolio Website</h3>
+            </div>
+            <div class="description">
+                <p>
+                    In developing this portfolio website, I aimed to create an interactive and visually engaging
+                    platform that reflects my commitment to clean, user-centered design. Leveraging my expertise in
+                    HTML, CSS, and JavaScript, I meticulously crafted each element to ensure a seamless and responsive
+                    user experience. The carefully curated project gallery showcases a diverse range of my work, while
+                    the intuitive navigation and elegant design provide visitors with a captivating journey through my
+                    skills and accomplishments. </p>
+                <button class="btn">Read More..
+                </button>
+            </div>
+        </div>
+
+
+
+        <div class="cards">
+            <div class="image">
+                <img src="5.jpeg">
+            </div>
+            <div class="title">
+                <h3> E-Commerce website</h3>
+            </div>
+            <div class="description">
+                <p>In crafting this E-commerce website, I undertook the challenge of creating a dynamic and user-centric
+                    online shopping platform. I meticulously designed the user interface, ensuring a seamless browsing
+                    experience, and integrated secure payment gateways to facilitate real transactions. Leveraging my
+                    web development expertise, I implemented a recommendation engine powered by machine learning
+                    algorithms, enhancing user engagement through personalized product suggestions. </p>
+                <button class="btn">Read More..
+                </button>
+            </div>
+        </div>
+
+
+
+        <div class="cards">
+            <div class="image">
+                <img src="6.jpeg">
+            </div>
+            <div class="title">
+                <h3> Online Learning Platform</h3>
+            </div>
+            <div class="description">
+                <p>In developing this Online Learning Platform, I set out to create a dynamic and accessible educational
+                    hub. I meticulously designed the user interface to
+                    ensure an intuitive experience, enabling seamless course discovery, enrollment, and progress
+                    tracking. Incorporating interactive elements such as live discussions and quizzes. My expertise in
+                    web development shines through in
+                    the secure payment processing and personalized user profiles, ensuring a well-rounded educational
+                    experience. </p>
+                <button class="btn">Read More..
+                </button>
+            </div>
+        </div>
+        <div class="contact" id="contacts">
+            <div class="container">
+                <div class="row1">
+                    <div class="contact-left">
+                        <h1 class="contacts">Contact me</h1>
+                        <p><i class="fa-solid fa-envelope"></i>harsh.gupta2021a@vitstudent.ac.in</p>
+                        <p><i class="fa-solid fa-phone"></i>8920682626</p>
+                        <div class="social-icons">
+                            <a href="https://facebook.com/harshgupta"><i class="fa-brands fa-square-facebook"></i></a>
+                            <a href="https://twitter.com/harshgupta"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://instagram.com/harshgupta"><i class="fa-brands fa-square-instagram"></i></a>
+                            <a href="https://linkkedin.com/harshgupta"><i
+                                    class="fa-brands fa-linkedin"></i></a><br><br><br>
+                        </div>
+                        <a href="harsh CV.pdf" download class="btn1">Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" placeholder="Enter your Name">
+                            <label for="floatingInput"></label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="email" class="form-control" placeholder="name@xample">
+                            <label for="floatingInput"></label>
+                        </div>
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 300px"></textarea>
+                            <label for="floatingTextarea2">Message</label>
+                        </div>
+                            <button type="submit" class="btn1">Submit</button>
+                        
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+</body>
+
+</html>
