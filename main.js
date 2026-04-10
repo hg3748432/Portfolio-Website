@@ -27,3 +27,21 @@ function openexperience(){
     btn2.style.color="aliceblue";
     btn1.style.color="aliceblue";
 }
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    fetch("/api/contact", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name, email, message })
+    })
+        .then(res => res.json())
+        .then(data => alert("Submitted 🚀"))
+        .catch(err => console.error(err));
+});
