@@ -1,20 +1,56 @@
 const express = require("express");
-const app = express();
+const mongoose = require("mongoose");
 
+const app = express();
 app.use(express.json());
 
+const PORT = 5000;
+const MONGO_URI =
+  process.env.MONGO_URI || "mongodb://localhost:27017/portfolio_db";
+
+// MongoDB Connection
+mongoose
+  .connect(MONGO_URI)
+  .then(() => console.log("MongoDB connected ✅"))
+  .catch((err) => console.log("MongoDB error:", err));
+
+// Schema
+const contactSchema = new mongoose.Schema(
+  {
+    name: String,
+    email: String,
+    message: String,
+  },
+  { timestamps: true }
+);
+
+const Contact = mongoose.model("Contact", contactSchema);
+
+// Health Route
 app.get("/", (req, res) => {
-    res.send("Backend running 🚀");
+  res.send("Backend running 🚀");
 });
 
 // Contact API
-app.post("/contact", (req, res) => {
-    const data = req.body;
-    console.log("New Contact:", data);
+app.post("/contact", async (req, res) => {
+  try {
+    const { name, email, message } = req.body;
 
-    res.json({ message: "Form received successfully" });
+    const newContact = new Contact({
+      name,
+      email,
+      message,
+    });
+
+    await newContact.save();
+
+    res.json({ message: "Form saved successfully ✅" });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Something went wrong" });
+  }
 });
 
-app.listen(5000, () => {
-    console.log("Server running on port 5000");
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
