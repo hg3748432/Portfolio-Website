@@ -45,3 +45,33 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         .then(data => alert("Submitted 🚀"))
         .catch(err => console.error(err));
 });
+
+document.getElementById("uploadForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const file = document.getElementById("fileInput").files[0];
+    const status = document.getElementById("uploadStatus");
+
+    if (!file) {
+        status.innerText = "Please choose a file";
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append("file", file);
+
+    status.innerText = "Uploading...";
+
+    fetch("/api/upload", {
+        method: "POST",
+        body: formData
+    })
+        .then(res => res.json())
+        .then(data => {
+            status.innerHTML = `Uploaded ✅ <a href="${data.url}" target="_blank">View File</a>`;
+        })
+        .catch(err => {
+            console.error(err);
+            status.innerText = "Upload failed";
+        });
+});
