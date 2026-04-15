@@ -1,4 +1,4 @@
-name: Deploy to EC2
+name: Deploy Portfolio Website
 
 on:
   push:
@@ -10,20 +10,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Deploy via SSH
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Deploy to EC2
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
+            set -e
+
+            echo "📥 Pull latest code"
             cd ~/Portfolio-Website
             git pull origin main
 
-            cd backend
-            npm install
+            echo "🐳 Restart Docker containers"
+            sudo docker-compose down
+            sudo docker-compose up -d --build
 
-            pm2 restart server || pm2 start server.js --name server
-            pm2 save
+            echo "🌐 Deploy frontend to nginx root"
+            sudo rm -rf /var/www/html/*
+            sudo cp -r ~/Portfolio-Website/index.html /var/www/html/
+            sudo cp -r ~/Portfolio-Website/style.css /var/www/html/
+            sudo cp -r ~/Portfolio-Website/main.js /var/www/html/
 
-            sudo systemctl restart nginx
+            echo "🔄 Reload nginx"
+            sudo systemctl reload nginx
+
+            echo "✅ Deployment complete"
