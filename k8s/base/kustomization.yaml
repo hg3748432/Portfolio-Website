@@ -1,0 +1,9 @@
+resources:
+  - frontend-deployment.yaml
+  - frontend-service.yaml
+  - backend-deployment.yaml
+  - backend-service.yaml
+  - mongo-deployment.yaml
+  - mongo-service.yaml
+  - mongo-pvc.yaml
+  - backend-configmap.yaml
